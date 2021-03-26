@@ -144,7 +144,7 @@ nav a{
 /* END HEADER ////////*** MAIN *** AND *** SERVICES *** START ********************** */
 main{
   width: 100%;
-  height: auto; /*CONSIDER USING VH - BROWSER COMPAT?? ********/
+  /* height: auto; CONSIDER USING VH - BROWSER COMPAT?? ******* */
   background: white;
 }
 .ServicesWrapper{
@@ -165,7 +165,7 @@ main{
 }
 .ServicesIconContainer{
   max-width: 100px;
-  height: 100px;
+  /* height: 100px; */
   /* background: purple; */
   margin: 0 auto;
   /* border: 3px solid yellow; */
@@ -173,7 +173,7 @@ main{
 .ServicesIconContainer > img{
   display: block;
   width: 100%; 
-  height: 100%;
+  /* height: 100%; */
   /* border: 1px solid black; */
 }
 .ServicesContainers h3{
@@ -205,7 +205,7 @@ main{
 .StoryVideoContainer > section {
   display: block;
   width: 80%;
-  height: 250px;
+  /* height: 250px; */
   margin: 0 auto;
   /* border: 3px solid red; */
 }
@@ -220,7 +220,7 @@ main{
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
 }
 
 .Story{
@@ -280,8 +280,8 @@ main{
   /* border: 2px solid yellow; */
 }
 .BeauticianContainer > section > img{
-  max-height: 300px;
-  max-width: 100%;
+  /* max-height: 300px; */
+  max-width: 85%;
   object-fit: cover;
   margin: 0 auto;
   display: block;
@@ -289,9 +289,8 @@ main{
 /* BEAUTICIAN LABELS */
 .BeauticianContainer > section + section{
   width: 62%;
-  height: 45px;
+  padding: 0.5rem 1.0rem;
   margin: 0 auto;
-  /* padding: 3% 8%; */
   text-align: center;
   background: black;
   color: white;
@@ -307,7 +306,7 @@ main{
 
 .DiscountOfferWrapper{
   width: 100%;
-  height: auto;
+  /* height: auto; */
   margin: 5% auto;
   /* border: 1px solid black; */
 }
@@ -328,7 +327,7 @@ main{
 }
 .DiscountOfferContainer > section{
   width: 50%;
-  height: 250px;
+  /* height: 250px; */
   /* border: 1px solid red; */
   position: absolute;
   top: 100px;
@@ -360,7 +359,7 @@ main{
 /* END DISCOUNT OFFER---****** LOOKBOOK START!!!--**************** */
 .LookbookMainWrapper{
   width: 100%;
-  height: auto;
+  /* height: auto; */
   margin: 5% auto;
 }
 .LookbookMainWrapper > h3{
@@ -371,7 +370,7 @@ main{
 }
 .LookbookImagesWrapper{
   width: 85vw;
-  height: auto;
+  /* height: auto; */
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(3, 1fr);
@@ -440,7 +439,7 @@ main{
 /* MEDIA QUERY 500PX--******-OLDER IPHONES / ANDROIDS 500PX--******** */
 @media (max-width: 500px){
   header{
-    height: 65vh;
+    height: 65vh; /* workaround to get rid of heigt?  */
     background-position: bottom right;
     background-size: cover;
   };
@@ -460,7 +459,7 @@ main{
   }
   .headerContent{
     width: 80%;
-    height: auto;
+    /* height: auto; */
   }
   h1{
     font-size: 5vw;
@@ -502,7 +501,7 @@ main{
 /* END HEADER ////////*** MAIN *** AND *** SERVICES *** START ********************** */
 main{
   width: 100%;
-  height: auto; /*CONSIDER USING VH - BROWSER COMPAT?? ********/
+  /* height: auto; CONSIDER USING VH - BROWSER COMPAT?? ******* */
   background: white;
 }
 .ServicesWrapper{
@@ -524,7 +523,7 @@ main{
 }
 .ServicesIconContainer{
   max-width: 100px;
-  height: auto;
+  /* height: auto; */
   /* background: purple; */
   margin: 0 auto;
   /* border: 3px solid yellow; */
@@ -532,7 +531,7 @@ main{
 .ServicesIconContainer > img{
   display: block;
   max-width: 100%; 
-  height: auto;
+  /* height: auto; */
   /* border: 1px solid black; */
 }
 .ServicesContainers h3{
@@ -548,11 +547,11 @@ main{
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  -moz-grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  /* -moz-grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
   /* grid-template-rows: 1; */
   padding: 0 5%;
   margin: 5% auto;
-  /* border: 2px solid black; */
+  border: 2px solid black;
 }
 
 .StoryVideoContainer{
@@ -565,7 +564,7 @@ main{
 .StoryVideoContainer > section {
   display: block;
   width: 80%;
-  height: 250px;
+  /* height: 250px; */
   margin: 0 auto;
   /* border: 3px solid red; */
 }
@@ -580,11 +579,11 @@ main{
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
 }
 
 .Story{
-  height: 250px;
+  /* height: 250px; */
   Order: 1;
   padding-right: 5%;
   /* border: 2px solid blue; */
@@ -615,7 +614,7 @@ main{
 /* END STORY---************BEAUTICIAN START!!!---********************* */
 .BeauticiansWrapper{
   width: 100%;
-  height: 50vh;
+  /* height: 50vh; */
   margin: 5% auto;
   display: flex;
   flex-direction: column;
@@ -637,7 +636,7 @@ main{
   /* border: 2px solid yellow; */
 }
 .BeauticianContainer > section > img{
-  height: auto;
+  /* height: auto; */
   max-width: 100%;
   object-fit: cover;
   margin: 0 auto;
@@ -646,7 +645,7 @@ main{
 /* BEAUTICIAN LABELS */
 .BeauticianContainer > section + section{
   width: 62%;
-  height: 45px;
+  /* height: 45px; */
   margin: 0 auto;
   /* padding: 3% 8%; */
   text-align: center;
@@ -685,7 +684,7 @@ main{
 }
 .DiscountOfferContainer > section{
   width: 50%;
-  height: 250px;
+  /* height: 250px; */
   /* border: 1px solid red; */
   position: absolute;
   top: 100px;
@@ -717,7 +716,7 @@ main{
 /* END DISCOUNT OFFER---****** LOOKBOOK START!!!--**************** */
 .LookbookMainWrapper{
   width: 100%;
-  height: auto;
+  /* height: auto; */
   margin: 5% auto;
 }
 .LookbookMainWrapper > h3{
@@ -728,7 +727,7 @@ main{
 }
 .LookbookImagesWrapper{
   width: 85vw;
-  height: auto;
+  /* height: auto; */
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(3, 1fr);
