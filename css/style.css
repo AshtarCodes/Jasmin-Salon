@@ -228,16 +228,16 @@ main {
   border: 2px solid black;
 }
 .StoryVideoContainer{
-  width: 50%;
+  width: min(50%, 60rem);
   /* background: purple; */
   /* Order: 2; */
   /* border: 2px solid blue; */
-  /* padding-left: 2.5%; */
+  padding: 2.5%;
 
 }
 
 .videoWrapper {
-  width: 80%;
+  width: 100%;
   display: block;
   position: relative;
   padding-bottom: 56.25%; /* 16:9 */
@@ -256,7 +256,7 @@ main {
   width: 50%;
   /* height: 250px; */
   /* Order: 1; */
-  /* padding-right: 5%; */
+  padding: 2em;
   /* border: 2px solid blue; */
 }
 .Story > h3{
