@@ -5,12 +5,17 @@
   box-sizing: border-box;
 }
 
+
 /******************************************
 /* BASE STYLES
 /*******************************************/
 
 body {
   font-size: 62.5%;
+}
+.container{
+  margin-inline: auto;
+  width: min(90%, 112.8rem)
 }
 h1{
   font-size: clamp(1.3rem, 2.5vw, 1.5rem) ;
