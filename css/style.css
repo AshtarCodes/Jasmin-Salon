@@ -33,6 +33,22 @@ ul{
 /******************************************
 /* LAYOUT
 /*******************************************/
+.flex-one{
+  display: flex;
+  flex-direction: column;
+}
+.flex-two {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+}
+.flex-three{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+}
 header {
   width: 100%;
   height: 700px;
@@ -147,24 +163,17 @@ nav a{
 }
 
 /* END HEADER ////////*** MAIN *** AND *** SERVICES *** START ********************** */
-main{
+main {
   width: 100%;
   /* height: auto; CONSIDER USING VH - BROWSER COMPAT?? ******* */
   background: white;
 }
 .ServicesWrapper{
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  align-content: center;
   width: 100%;
-  margin: 5% auto;
-  padding: 0 2%;
-  /* border: 1px solid black; */
 }
 .ServicesContainers{
-  width: 33.33%;
-  padding: 3%;
+  width: 30%;
+  /* padding: 3%; */
   text-align: center;
   /* border: 2px solid blue; */
 }
@@ -172,7 +181,7 @@ main{
   max-width: 100px;
   /* height: 100px; */
   /* background: purple; */
-  margin: 0 auto;
+  margin-inline: auto;
   /* border: 3px solid yellow; */
 }
 .ServicesIconContainer > img{
@@ -192,8 +201,8 @@ main{
 /* END SERVICES************STORY START!!--***************---------- */
 .StoryWrapper{
   width: 100%;  
-  padding: 0 5%;
-  margin: 5% auto;
+  /* padding: 0 5%; */
+  /* margin: 5% auto; */
   /* border: 2px solid black; */
 }
 .flex-row {
@@ -210,37 +219,41 @@ main{
   .flex-row > * + * {
     margin-left: 2em;
   }
-  
+}
+
+.StoryWrapper{
+  width: 100%;  
+  /* padding: 0 5%; */
+  /* margin: 5% auto; */
+  border: 2px solid black;
 }
 .StoryVideoContainer{
+  width: 50%;
   /* background: purple; */
-  Order: 2;
+  /* Order: 2; */
   /* border: 2px solid blue; */
-  padding-left: 2.5%;
+  /* padding-left: 2.5%; */
 
-}
-.StoryVideoContainer > section {
-  display: block;
-  width: 80%;
-  /* height: 250px; */
-  margin: 0 auto;
-  /* border: 3px solid red; */
 }
 
 .videoWrapper {
+  width: 80%;
+  display: block;
   position: relative;
   padding-bottom: 56.25%; /* 16:9 */
   height: 0;
+  margin: 0 auto;
 }
 .videoWrapper iframe {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  /* height: 100%; */
+  height: 100%;
 }
 
 .Story{
+  width: 50%;
   /* height: 250px; */
   /* Order: 1; */
   /* padding-right: 5%; */
@@ -375,9 +388,7 @@ main{
 
 /* END DISCOUNT OFFER---****** LOOKBOOK START!!!--**************** */
 .LookbookMainWrapper{
-  width: 100%;
-  /* height: auto; */
-  margin: 5% auto;
+  margin: 3em auto;
 }
 .LookbookMainWrapper > h3{
   text-align: center;
