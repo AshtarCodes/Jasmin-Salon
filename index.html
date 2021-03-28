@@ -10,6 +10,9 @@
 
 		<!--FontAwesome Icons CDN File link-->
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous"/>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;900&display=swap" rel="stylesheet"> 
+		<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Roboto:wght@100;300;400;900&display=swap" rel="stylesheet"> 
 		<!-- external CSS link -->
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/style.css">
@@ -29,21 +32,25 @@
 						<li><a class="fas fa-search" alt="Search"></a></li>
 						<li><a class="fas fa-shopping-bag" alt="Cart"></a></li>
 					</ul>
-					<a class='book' href="#">Book Online</a>
-		  	    </nav>
+					<span><a class='book' href="#">Book Online</a></span>
+				</nav>
 		    </div>
-			<section class='headerContent'>
-				<h2>Blonde & Highlight</h2>
-				<span>Define your uniqueness by your hairstyle</span>
-				<span>Our Services</span>
-				<section>
-					<span>Your First Visit</span>
-					<span><div>-20%</div> for the first classic hair coloring</span>
-					<a href="#">Book Online</a>
-				</section>
-			</section>
 		</header>
 		<main>
+			<section class="hero">
+				<div class="container">
+					<section class='heroContent'>
+						<h2>Blonde & Highlight</h2>
+						<p>Define your uniqueness by your hairstyle</p>
+						<span>Our Services</span>
+						<section>
+							<span>Your First Visit</span>
+							<span><div>-20%</div> for the first classic hair coloring</span>
+							<span><a class='btn' href="#">Book Online</a></span>
+						</section>
+					</section>
+				</div>
+			</section>			
 			<div class="container">
 				<section class="wrapper">
 					<div class="flex">
@@ -52,21 +59,21 @@
 								<img src="images/icons8-beautician-64.png" alt="Beautician icon">
 							</section>
 							<h3>Expert Beauticians</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+							<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi nesciunt officiis ab velit possimus iste hic adipisci? Voluptatibus, odio vitae.</p>
 						</section>
 						<section class="col-3 ServicesContainers">
 							<section class="ServicesIconContainer">
 								<img src="images/icons8-barber-chair-100.png" alt="Salon Chair icon">
 							</section>
 							<h3>Quality Services</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+							<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi nesciunt officiis ab velit possimus iste hic adipisci? Voluptatibus, odio vitae.</p>
 						</section>
 						<section class="col-3 ServicesContainers">
 							<section class="ServicesIconContainer">
 								<img src="images/icons8-foundation-makeup-100.png" alt="Beauty Product icon">
 							</section>
 							<h3>Beauty Products</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+							<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi nesciunt officiis ab velit possimus iste hic adipisci? Voluptatibus, odio vitae.</p>
 						</section>
 					</div>
 				</section>
@@ -77,7 +84,7 @@
 						<section class="col-2 Story">
 							<h3>Make your own momentum</h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-							<a href="#">Read More</a>
+							<a class='btn' href="#">Read More</a>
 						</section>
 						<section class="col-2 StoryVideoContainer">
 							<section class='videoWrapper'>
@@ -126,8 +133,8 @@
 						<section class="column DiscountOfferContainer">
 							<section>
 								<h4>Colour Day Offer!</h4>
-								<span><span>-10%</span> on haircut, color, and highlight</span>
-								<a href="#">Book Appointment</a>
+								<p><span>-10%</span> on haircut, color, and highlight</p>
+								<span><a href="#">Book Appointment</a></span>
 							</section>
 						</section>
 					</div>
