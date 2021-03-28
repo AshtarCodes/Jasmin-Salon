@@ -33,6 +33,21 @@ ul{
 /******************************************
 /* LAYOUT
 /*******************************************/
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 64em){
+  .flex {
+    flex-direction: row;
+  }
+  .flex > * {
+    flex-basis: 100%;
+  }
+  .flex > * + * {
+    margin-left: 2em;
+  }
+}
 .flex-one{
   display: flex;
   flex-direction: column;
@@ -199,49 +214,22 @@ main {
 }
 
 /* END SERVICES************STORY START!!--***************---------- */
-.StoryWrapper{
-  width: 100%;  
-  /* padding: 0 5%; */
-  /* margin: 5% auto; */
-  /* border: 2px solid black; */
-}
-.flex-row {
-  display: flex;
-  flex-direction: column;
-}
-@media (min-width: 40em){
-  .flex-row{
-    flex-direction: row;
-  }
-  .flex-row > * {
-    flex-basis: 100%;
-  }
-  .flex-row > * + * {
-    margin-left: 2em;
-  }
-}
 
 .StoryWrapper{
   width: 100%;  
-  /* padding: 0 5%; */
-  /* margin: 5% auto; */
   border: 2px solid black;
 }
 .StoryVideoContainer{
   width: min(50%, 60rem);
-  /* background: purple; */
-  /* Order: 2; */
-  /* border: 2px solid blue; */
   padding: 2.5%;
-
 }
 
 .videoWrapper {
   width: 100%;
+  height: 0;
   display: block;
   position: relative;
   padding-bottom: 56.25%; /* 16:9 */
-  height: 0;
   margin: 0 auto;
 }
 .videoWrapper iframe {
@@ -289,12 +277,6 @@ main {
   margin: 5% auto;
   /* padding-left: 5%; */
   /* border: 1px solid black; */
-}
-
-.flex-column{
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
 }
 
 .BeauticianContainer{
@@ -465,9 +447,9 @@ main {
 /* ADDITIONAL STYLES
 /*******************************************/
 /* MEDIA QUERY 500PX--******-OLDER IPHONES / ANDROIDS 500PX--******** */
-@media (max-width: 500px){
+/* @media (max-width: 500px){
   header{
-    height: 65vh; /* workaround for this height rule?  */
+    height: 65vh; 
     background-position: bottom right;
     background-size: cover;
   };
@@ -487,7 +469,6 @@ main {
   }
   .headerContent{
     width: 80%;
-    /* height: auto; */
   }
   h1{
     font-size: 5vw;
@@ -525,11 +506,11 @@ main {
     padding: 5% 9%;
     
   }
-  
+*/
 /* END HEADER ////////*** MAIN *** AND *** SERVICES *** START ********************** */
+/*
 main{
   width: 100%;
-  /* height: auto; CONSIDER USING VH - BROWSER COMPAT?? ******* */
   background: white;
 }
 .ServicesWrapper{
@@ -541,26 +522,22 @@ main{
   width: 100%;
   margin: 5% auto;
   padding: 0 2%;
-  /* border: 1px solid black; */
 }
 .ServicesContainers{
   width: 80%;
   padding: 3%;
   text-align: center;
-  /* border: 2px solid blue; */
+  border: 2px solid blue;
 }
 .ServicesIconContainer{
   max-width: 100px;
-  /* height: auto; */
-  /* background: purple; */
   margin: 0 auto;
-  /* border: 3px solid yellow; */
+  border: 3px solid yellow;
 }
 .ServicesIconContainer > img{
   display: block;
-  max-width: 100%; 
-  /* height: auto; */
-  /* border: 1px solid black; */
+  max-width: 100%;
+  border: 1px solid black;
 }
 .ServicesContainers h3{
   font-size: 1.2rem;
@@ -569,59 +546,34 @@ main{
   color: grey;
   font-size: 0.8rem;
 }
-
+*/
 /* END SERVICES************STORY START!!--***************---------- */
+/*
 .StoryWrapper{
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  /* -moz-grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
-  /* grid-template-rows: 1; */
   padding: 0 5%;
   margin: 5% auto;
   border: 2px solid black;
 }
 
 .StoryVideoContainer{
-  /* background: purple; */
   Order: 2;
-  /* border: 2px solid blue; */
+  border: 2px solid blue;
   padding-left: 2.5%;
 
 }
 .StoryVideoContainer > section {
   display: block;
   width: 80%;
-  /* height: 250px; */
   margin: 0 auto;
-  /* border: 3px solid red; */
+  border: 3px solid red;
 }
 
-.videoWrapper {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 */
-  height: 0;
-}
-.videoWrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  /* height: 100%; */
-}
-
-.Story{
-  /* height: 250px; */
-  Order: 1;
-  padding-right: 5%;
-  /* border: 2px solid blue; */
-}
 .Story > h3{
   font-size: 2rem;
   text-transform: uppercase;
   font-weight: 400;
-  /* margin-top: 0%;
-  margin-bottom: 4%; */
 }
 .Story > p{
   font-size: 0.9rem;
@@ -639,47 +591,43 @@ main{
   display: block;
   text-align: center;
 }
+*/
 /* END STORY---************BEAUTICIAN START!!!---********************* */
+/*
 .BeauticiansWrapper{
   width: 100%;
-  /* height: 50vh; */
   margin: 5% auto;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  /* padding-left: 5%; */
-  /* border: 1px solid black; */
+  border: 1px solid black;
 }
 .BeauticianContainer{
   width: 80%;
-  /* padding: 0 3%; */
-  /* border: 2px solid blue; */
+  border: 2px solid blue;
 }
 
-/* IMAGE CONTAINER */
 .BeauticianContainer > section:nth-of-type(1){
   width: 62%;
   margin: 50px auto 0 auto;
-  /* border: 2px solid yellow; */
+  border: 2px solid yellow;
 }
 .BeauticianContainer > section > img{
-  /* height: auto; */
   max-width: 100%;
   object-fit: cover;
   margin: 0 auto;
   display: block;
 }
-/* BEAUTICIAN LABELS */
 .BeauticianContainer > section + section{
   width: 62%;
-  /* height: 45px; */
+
   margin: 0 auto;
-  /* padding: 3% 8%; */
+
   text-align: center;
   background: black;
   color: white;
-  /* border: 3px solid orange; */
+  border: 3px solid orange;
 }
 .BeauticianName{
   font-size: 0.8rem;
@@ -687,13 +635,12 @@ main{
   margin-bottom: 2%;
 }
 
-/* END BEAUTICIAN --**********DISCOUNT OFFER START!!--*********** */
 
 .DiscountOfferWrapper{
   width: 100%;
-  /* height: auto; */
+
   margin: 5% auto;
-  /* border: 1px solid black; */
+  border: 1px solid black;
 }
 
 .DiscountOfferContainer{ 
@@ -703,17 +650,17 @@ main{
   margin: 0 auto;
   background-image: url(../images/blondeoffer.jpg);
   background-repeat: no-repeat;
-  /* background-size: 100% 100%; */
+
   background-position: center;
   background-size: contain;
-  /* border: 2px solid blue; */
+  border: 2px solid blue;
   position: relative;
   overflow: hidden;
 }
 .DiscountOfferContainer > section{
   width: 50%;
-  /* height: 250px; */
-  /* border: 1px solid red; */
+
+  border: 1px solid red;
   position: absolute;
   top: 100px;
   left: 40px;
@@ -741,10 +688,10 @@ main{
   border-radius: 2%;
 }
 
-/* END DISCOUNT OFFER---****** LOOKBOOK START!!!--**************** */
+
 .LookbookMainWrapper{
   width: 100%;
-  /* height: auto; */
+
   margin: 5% auto;
 }
 .LookbookMainWrapper > h3{
@@ -755,7 +702,7 @@ main{
 }
 .LookbookImagesWrapper{
   width: 85vw;
-  /* height: auto; */
+
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(3, 1fr);
@@ -818,4 +765,5 @@ main{
 
 
 };
+*/
 
