@@ -14,7 +14,7 @@
   --clr-primary-400: red;
 
   --clr-neutral-100: #fff;
-  --clr-neutral-900: #222c2a;
+  --clr-neutral-900: #090808;
 
   --ff-primary: "Roboto", sans-serif;
   --ff-accent: "Playfair Display", serif;
@@ -40,8 +40,8 @@ h2{
   font-size: 3em;
   color: var(--clr-neutral-100);
   font-weight: 100;
-  margin-top: 0em;
-  margin-bottom: 0.5em;
+  /* margin-top: 0em;
+  margin-bottom: 0.5em; */
 }
 h3, h4, h5{
   font-size: 1.2rem;
@@ -61,12 +61,11 @@ p{
   font-size: 0.85rem;
   font-weight: 300;
 }
-.btn {
+/* .btn {
   padding: 1em 2.5em;
   background-color: var(--clr-neutral-900);
   color: var(--clr-neutral-100);
-  display: block;
-}
+} */
 /******************************************
 /* LAYOUT
 /*******************************************/
@@ -169,40 +168,39 @@ nav a{
   color: black;
 }
 .hero {
-  width: 100%;
+  /* width: 100%; */
+  display: grid;
+  grid-template-columns: minmax(1em, 1fr) minmax(0px, 500px) minmax(1em, 1fr);
   background-image: url(../images/purplehair.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: white;
 }
+.hero > *{
+  grid-column: 2 / -2;
+}
 .heroContent{
-  width: 45%;
-  text-align: left;
-  /* border: 1px solid red; */
+
 }
-.heroContent > section > span:nth-child(1){
-  display: block;
-  /* font-size: 1rem; */
-  /* margin-bottom: 15%; */
-}
-.heroContent > section > span:nth-child(2){
-  /* font-size: 1.1rem;
-  line-height: 1.5; */
-  display: block;
-  /* margin-bottom: 30%; */
-}
-.heroContent > section div{
-  /* font-size: 1.5rem; */
-  display: inline-block;
-}
-.heroContent > section > a{
-  /* font-size: 0.9rem; */
-  /* background: white; */
-  /* padding: 10% 18%; */
-  /* border-radius: 2%; */
+.heroContent a{
   text-decoration: none;
-  /* color: black; */
+}
+.heroBox {
+  /* background: var(--clr-neutral-900);
+  color: var(--clr-neutral-100);  */
+}
+.hero-subtitle{
+  font-size: 1.5rem;
+  color: var(--clr-neutral-100);
+  font-family: var(--ff-accent);
+  font-weight: 100;
+}
+.hero-services{
+  font-size: 1.5rem;
+  color: var(--clr-neutral-100);
+  font-family: var(--ff-primary);
+  font-weight: 500;
 }
 
 /* END HEADER ////////*** MAIN *** AND *** SERVICES *** START ********************** */
