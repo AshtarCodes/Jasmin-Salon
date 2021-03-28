@@ -9,71 +9,133 @@
 /******************************************
 /* BASE STYLES
 /*******************************************/
+:root {
+  --clr-primary-200: #f3eed9;
+  --clr-primary-400: red;
 
-body {
-  font-size: 62.5%;
+  --clr-neutral-100: #fff;
+  --clr-neutral-900: #090808;
+
+  --ff-primary: "Roboto", sans-serif;
+  --ff-accent: "Playfair Display", serif;
 }
-.container{
-  margin-inline: auto;
-  width: min(90%, 112.8rem)
+body {
+  font-family: var(--ff-primary);
+  font-weight: 400;
+  font-size: 1.3125rem;
+  line-height: 1.5;
+}
+h1,h2,h3,h4,h5{
+  margin: 0;
+  padding: 0;
 }
 h1{
-  font-size: clamp(1.3rem, 2.5vw, 1.5rem) ;
-  margin-left: 2%;
+  font-size: clamp(1rem, 2.5vw, 1.5rem) ;
+  margin: 0%;
+  font-family: var(--ff-accent);
+  font-weight: 400;
 }
 h2{
-  font-size: 6rem;
-  color: white;
-  font-weight: lighter;
-  margin: 1rem 0 0.5rem 0;
+  font-family: var(--ff-accent);
+  font-size: 3em;
+  color: var(--clr-neutral-100);
+  font-weight: 100;
+  /* margin-top: 0em;
+  margin-bottom: 0.5em; */
+}
+h3, h4, h5{
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+h1,h2,h3,h4,h5{
+  text-transform: uppercase;
 }
 ul{
   list-style-type: none;
 }
+img {
+  display: block;
+  max-width: 100%;
+}
+p{
+  font-size: 0.85rem;
+  font-weight: 300;
+}
+/* .btn {
+  padding: 1em 2.5em;
+  background-color: var(--clr-neutral-900);
+  color: var(--clr-neutral-100);
+} */
 /******************************************
 /* LAYOUT
 /*******************************************/
-.flex-one{
+.container{
+  width: min(90%, 71.5rem);
+  margin: 0 auto;
+  /* padding: inherit 7rem; */
+}
+.wrapper {
+  width: 100%;
+  margin: 2em auto;
+}
+.column {
+  width: min(100%, 28.5rem);
+}
+.col-2{
+  width: min(50%, 28.5rem);
+}
+.col-3{
+  width: min(33.33%, 22.85rem );
+}
+@media (max-width: 750px){
+  .column {
+    width: 90%;
+  }
+  .col-2,
+  .col-3{
+    width: 90%;
+    margin: 1em;
+  }
+}
+/* .container{
+  padding: inherit 4rem;
+} */
+.flex {
   display: flex;
   flex-direction: column;
-}
-.flex-two {
-  display: flex;
-  justify-content: space-evenly;
   align-items: center;
-  align-content: center;
+  justify-content: space-between;
 }
-.flex-three{
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  align-content: center;
+@media (min-width: 40em){
+  
+  .flex {
+    flex-direction: row;
+  }
+  .flex > * {
+    flex-basis: 100%;
+  }
+  .flex > * + * {
+    margin-left: 2em;
+  }
 }
 header {
   width: 100%;
-  height: 700px;
-  background-image: url(../images/purplehair.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: white;
-  position: relative;
-  margin: 0 auto 5% auto;
+  /* height: 33.33rem; */
+  margin: 0 auto;
 }
-header > div{
+/* header > div{
   overflow: hidden;
   background: white;
-
-}
+} */
 .navContainer{
   width: 100%;
-  height: 60px;
-  padding: 0 20px;
-  overflow: auto;
+  /* height: 60px; */
+  /* padding: 0 1rem; */
+  /* overflow: auto; */
 }
 .headerFlex{
-  display: inline-flex;
-  justify-content: space-between;
+  display: flex;
+  justify-content: space-around;
   align-items: center;
   margin: 0 auto;
 
@@ -82,15 +144,17 @@ header > div{
 .navLinks{
   width: 60%;
   display: inline-flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  padding: 0;
+  margin: 0;
 }
 .book{
   margin-right: 2%;
 }
-nav, h1, nav ul, nav img{
+/* nav, h1, nav ul, nav img{
   padding-top: 0%;
-}
+} */
 nav {
   width: 100%;
   height: 60px;
@@ -103,63 +167,40 @@ nav a{
   text-decoration: none;
   color: black;
 }
-.headerContent{
-  width: 45%;
-  text-align: left;
-  position: relative;
-  left: 10%;
-  top: 3%;
-  /* border: 1px solid red; */
+.hero {
+  /* width: 100%; */
+  display: grid;
+  grid-template-columns: minmax(1em, 1fr) minmax(0px, 500px) minmax(1em, 1fr);
+  background-image: url(../images/purplehair.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: white;
 }
-.headerContent > span:nth-of-type(1){
-  font-size: 1rem;
-  color: white;
-  margin-bottom: 1.5rem;
-  display: block;
-  /* border: 1px solid blue; */
+.hero > *{
+  grid-column: 2 / -2;
 }
-.headerContent > span:nth-of-type(2){
-  font-size: 1rem;
-  color: white;
-  background-color: black;
-  padding: 0.7rem;
-  margin-bottom: 2rem;
-  display: block;
-  width: 30%;
-  text-align: center;
-  border-radius: 1%;
+.heroContent{
+
 }
-.headerContent > section{
-  background: black;
-  color: white;
-  width: 35%;
-  height: 225px;
-  text-align: left;
-  padding: 4%;
-  border-radius: 1%;
-}
-.headerContent > section > span:nth-child(1){
-  display: block;
-  font-size: 1rem;
-  margin-bottom: 15%;
-}
-.headerContent > section > span:nth-child(2){
-  font-size: 1.1rem;
-  line-height: 1.5;
-  display: block;
-  margin-bottom: 30%;
-}
-.headerContent > section div{
-  font-size: 1.5rem;
-  display: inline-block;
-}
-.headerContent > section > a{
-  font-size: 0.9rem;
-  background: white;
-  padding: 10% 18%;
-  border-radius: 2%;
+.heroContent a{
   text-decoration: none;
-  color: black;
+}
+.heroBox {
+  /* background: var(--clr-neutral-900);
+  color: var(--clr-neutral-100);  */
+}
+.hero-subtitle{
+  font-size: 1.5rem;
+  color: var(--clr-neutral-100);
+  font-family: var(--ff-accent);
+  font-weight: 100;
+}
+.hero-services{
+  font-size: 1.5rem;
+  color: var(--clr-neutral-100);
+  font-family: var(--ff-primary);
+  font-weight: 500;
 }
 
 /* END HEADER ////////*** MAIN *** AND *** SERVICES *** START ********************** */
@@ -168,144 +209,90 @@ main {
   /* height: auto; CONSIDER USING VH - BROWSER COMPAT?? ******* */
   background: white;
 }
-.ServicesWrapper{
-  width: 100%;
-}
+
 .ServicesContainers{
-  width: 30%;
+  /* width: 30%; */
   /* padding: 3%; */
   text-align: center;
   /* border: 2px solid blue; */
 }
-.ServicesIconContainer{
-  max-width: 100px;
-  /* height: 100px; */
-  /* background: purple; */
-  margin-inline: auto;
-  /* border: 3px solid yellow; */
-}
-.ServicesIconContainer > img{
-  display: block;
-  width: 100%; 
-  /* height: 100%; */
-  /* border: 1px solid black; */
-}
-.ServicesContainers h3{
-  font-size: 1.2rem;
-}
-.ServicesContainers p{
-  color: grey;
-  font-size: 0.8rem;
-}
+  .ServicesIconContainer{
+    max-width: 100px;
+    margin: 0 auto;
+  }
+    .ServicesIconContainer > img{
+      display: block;
+      width: 100%; 
+      /* height: 100%; */
+      /* border: 1px solid black; */
+    }
+    .ServicesContainers h3{
+      /* font-size: 1.2rem; */
+    }
+    .ServicesContainers p{
+      /* color: grey;
+      font-size: 0.8rem; */
+    }
 
 /* END SERVICES************STORY START!!--***************---------- */
-.StoryWrapper{
-  width: 100%;  
-  /* padding: 0 5%; */
-  /* margin: 5% auto; */
-  /* border: 2px solid black; */
-}
-.flex-row {
-  display: flex;
-  flex-direction: column;
-}
-@media (min-width: 40em){
-  .flex-row{
-    flex-direction: row;
-  }
-  .flex-row > * {
-    flex-basis: 100%;
-  }
-  .flex-row > * + * {
-    margin-left: 2em;
-  }
-}
-
-.StoryWrapper{
-  width: 100%;  
-  /* padding: 0 5%; */
-  /* margin: 5% auto; */
-  border: 2px solid black;
-}
-.StoryVideoContainer{
-  width: 50%;
-  /* background: purple; */
-  /* Order: 2; */
-  /* border: 2px solid blue; */
-  /* padding-left: 2.5%; */
-
-}
-
-.videoWrapper {
-  width: 80%;
-  display: block;
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 */
-  height: 0;
-  margin: 0 auto;
-}
-.videoWrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
 
 .Story{
-  width: 50%;
-  /* height: 250px; */
-  /* Order: 1; */
-  /* padding-right: 5%; */
+  /* width: min(50%, 28.5rem );
+  padding: 2em; */
   /* border: 2px solid blue; */
 }
-.Story > h3{
-  font-size: 2rem;
-  text-transform: uppercase;
-  font-weight: 400;
-  /* margin-top: 0%;
-  margin-bottom: 4%; */
+  .Story > h3{
+    /* font-size: 2rem; */
+    /* text-transform: uppercase; */
+    /* font-weight: 400; */
+  }
+  .Story > p{
+    /* font-size: 0.9rem; */
+    /* line-height: 1.5;
+    margin-bottom: 1 em; */
+  }
+  .Story > a{
+    /* font-size: 1em 2.5; */
+    /* width: 9.52rem; */
+    /* background: black; */
+    /* padding: 1em 2.5em; */
+    /* border-radius: 3%; */
+    text-decoration: none;
+    /* color: white; */
+    display: block;
+    text-align: center;
+  }
+.StoryVideoContainer{
+  /* width: min(50%, 28.5rem);
+  padding: 2.5%; */
 }
-.Story > p{
-  font-size: 0.9rem;
-  line-height: 1.5;
-  margin-bottom: 1 em;
-}
-.Story > a{
-  font-size: 0.9rem;
-  background: black;
-  padding: 3.5% 7%;
-  border-radius: 3%;
-  text-decoration: none;
-  color: white;
-  width: 200px;
-  display: block;
-  text-align: center;
-}
-/* END STORY---************BEAUTICIAN START!!!---********************* */
-.BeauticiansWrapper{
-  width: 100%;
-  /* height: 375px; */
-  margin: 5% auto;
-  /* padding-left: 5%; */
-  /* border: 1px solid black; */
-}
+  .videoWrapper {
+    width: 100%;
+    height: 0;
+    display: block;
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    margin: 0 auto;
+  }
+    .videoWrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
 
-.flex-column{
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
+/* END STORY---************BEAUTICIAN START!!!---********************* */
 
 .BeauticianContainer{
-  width: 33.33%;
+  /* width: 33.33%; */
   /* padding: 0 3%; */
   /* border: 2px solid blue; */
 }
 
 /* IMAGE CONTAINER */
 .BeauticianContainer > section:nth-of-type(1){
-  width: 62%;
+  /* width: 90%; */
   margin: 0 auto;
   /* border: 2px solid yellow; */
 }
@@ -318,86 +305,78 @@ main {
 }
 /* BEAUTICIAN LABELS */
 .BeauticianContainer > section + section{
-  width: 62%;
-  padding: 0.5rem 1.0rem;
+  /* width: 62%; */
+  /* font-size: 1rem; */
+  /* padding: 0.5em 1.25em; */
   margin: 0 auto;
   text-align: center;
-  background: black;
-  color: white;
+  /* background: black;
+  color: white; */
   /* border: 3px solid orange; */
 }
 .BeauticianName{
-  font-size: 0.8rem;
+  /* font-size: 0.8rem; */
   display: block;
-  margin-bottom: 2%;
+  /* margin-bottom: 2%; */
 }
 
 /* END BEAUTICIAN --**********DISCOUNT OFFER START!!--*********** */
 
-.DiscountOfferWrapper{
-  width: 100%;
-  /* height: auto; */
-  margin: 5% auto;
-  /* border: 1px solid black; */
-}
-
 .DiscountOfferContainer{ 
-  width: 80%;
+  /* width: 80%; */
   height: 0;
   padding-top: calc(268 / 600 * 100%);
   margin: 0 auto;
   background-image: url(../images/blondeoffer.jpg);
   background-repeat: no-repeat;
-  /* background-size: 100% 100%; */
   background-position: center;
   background-size: contain;
-  /* border: 2px solid blue; */
   position: relative;
   overflow: hidden;
+  /* background-size: 100% 100%; */
+  /* border: 2px solid blue; */
+  /* font-size: 1em; */
 }
 .DiscountOfferContainer > section{
-  width: 50%;
-  /* height: 250px; */
-  /* border: 1px solid red; */
+  width: 20em;
+  border: 1px solid red;
   position: absolute;
-  top: 100px;
-  left: 40px;
+  top: 4.76em;
+  left: 1.9em;
 }
-.DiscountOfferContainer > section > h4{
+/* .DiscountOfferContainer > section > h4{
   font-size: 1.3rem;
-}
-.DiscountOfferContainer > section > span{
+} */
+/* .DiscountOfferContainer > section > span{
   font-size: 1.9rem;
   text-transform: uppercase;
   font-weight: 400;
   display: block;
   margin-bottom: 10%;
-}
-.DiscountOfferContainer > section > span > span{
+} */
+/* .DiscountOfferContainer > section > span > span{
   font-size: 2.2rem;
   font-weight: bold;
-}
-.DiscountOfferContainer > section a{
+} */
+/* .DiscountOfferContainer > section a{
   background: black;
   font-size: 1rem;
   padding: 3% 5%;
   text-decoration: none;
   color: white;
   border-radius: 2%;
-}
+} */
 
 /* END DISCOUNT OFFER---****** LOOKBOOK START!!!--**************** */
-.LookbookMainWrapper{
-  margin: 3em auto;
-}
-.LookbookMainWrapper > h3{
+
+.LookbookMainWrapper h3{
   text-align: center;
-  font-size: 1.5rem;
-  font-weight: normal;
-  text-transform: uppercase;
+  /* font-size: 1.5rem; */
+  /* font-weight: normal; */
+  /* text-transform: uppercase; */
 }
 .LookbookImagesWrapper{
-  width: 85vw;
+  width: 100%;
   /* height: auto; */
   display: grid;
   grid-gap: 10px;
@@ -406,9 +385,9 @@ main {
   margin: 0 auto;
 }
 
-.ShortImg, .TallImg{
+/* .ShortImg, .TallImg{
   background: rgba(250, 6, 209, 0.514);
-}
+} */
 
 .item1{
   grid-column: 1/2;
@@ -460,14 +439,13 @@ main {
 }
 
 
-
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
 /* MEDIA QUERY 500PX--******-OLDER IPHONES / ANDROIDS 500PX--******** */
-@media (max-width: 500px){
+/* @media (max-width: 500px){
   header{
-    height: 65vh; /* workaround for this height rule?  */
+    height: 65vh; 
     background-position: bottom right;
     background-size: cover;
   };
@@ -487,7 +465,6 @@ main {
   }
   .headerContent{
     width: 80%;
-    /* height: auto; */
   }
   h1{
     font-size: 5vw;
@@ -525,11 +502,11 @@ main {
     padding: 5% 9%;
     
   }
-  
+*/
 /* END HEADER ////////*** MAIN *** AND *** SERVICES *** START ********************** */
+/*
 main{
   width: 100%;
-  /* height: auto; CONSIDER USING VH - BROWSER COMPAT?? ******* */
   background: white;
 }
 .ServicesWrapper{
@@ -541,26 +518,22 @@ main{
   width: 100%;
   margin: 5% auto;
   padding: 0 2%;
-  /* border: 1px solid black; */
 }
 .ServicesContainers{
   width: 80%;
   padding: 3%;
   text-align: center;
-  /* border: 2px solid blue; */
+  border: 2px solid blue;
 }
 .ServicesIconContainer{
   max-width: 100px;
-  /* height: auto; */
-  /* background: purple; */
   margin: 0 auto;
-  /* border: 3px solid yellow; */
+  border: 3px solid yellow;
 }
 .ServicesIconContainer > img{
   display: block;
-  max-width: 100%; 
-  /* height: auto; */
-  /* border: 1px solid black; */
+  max-width: 100%;
+  border: 1px solid black;
 }
 .ServicesContainers h3{
   font-size: 1.2rem;
@@ -569,59 +542,34 @@ main{
   color: grey;
   font-size: 0.8rem;
 }
-
+*/
 /* END SERVICES************STORY START!!--***************---------- */
+/*
 .StoryWrapper{
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  /* -moz-grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
-  /* grid-template-rows: 1; */
   padding: 0 5%;
   margin: 5% auto;
   border: 2px solid black;
 }
 
 .StoryVideoContainer{
-  /* background: purple; */
   Order: 2;
-  /* border: 2px solid blue; */
+  border: 2px solid blue;
   padding-left: 2.5%;
 
 }
 .StoryVideoContainer > section {
   display: block;
   width: 80%;
-  /* height: 250px; */
   margin: 0 auto;
-  /* border: 3px solid red; */
+  border: 3px solid red;
 }
 
-.videoWrapper {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 */
-  height: 0;
-}
-.videoWrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  /* height: 100%; */
-}
-
-.Story{
-  /* height: 250px; */
-  Order: 1;
-  padding-right: 5%;
-  /* border: 2px solid blue; */
-}
 .Story > h3{
   font-size: 2rem;
   text-transform: uppercase;
   font-weight: 400;
-  /* margin-top: 0%;
-  margin-bottom: 4%; */
 }
 .Story > p{
   font-size: 0.9rem;
@@ -639,47 +587,43 @@ main{
   display: block;
   text-align: center;
 }
+*/
 /* END STORY---************BEAUTICIAN START!!!---********************* */
+/*
 .BeauticiansWrapper{
   width: 100%;
-  /* height: 50vh; */
   margin: 5% auto;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  /* padding-left: 5%; */
-  /* border: 1px solid black; */
+  border: 1px solid black;
 }
 .BeauticianContainer{
   width: 80%;
-  /* padding: 0 3%; */
-  /* border: 2px solid blue; */
+  border: 2px solid blue;
 }
 
-/* IMAGE CONTAINER */
 .BeauticianContainer > section:nth-of-type(1){
   width: 62%;
   margin: 50px auto 0 auto;
-  /* border: 2px solid yellow; */
+  border: 2px solid yellow;
 }
 .BeauticianContainer > section > img{
-  /* height: auto; */
   max-width: 100%;
   object-fit: cover;
   margin: 0 auto;
   display: block;
 }
-/* BEAUTICIAN LABELS */
 .BeauticianContainer > section + section{
   width: 62%;
-  /* height: 45px; */
+
   margin: 0 auto;
-  /* padding: 3% 8%; */
+
   text-align: center;
   background: black;
   color: white;
-  /* border: 3px solid orange; */
+  border: 3px solid orange;
 }
 .BeauticianName{
   font-size: 0.8rem;
@@ -687,13 +631,12 @@ main{
   margin-bottom: 2%;
 }
 
-/* END BEAUTICIAN --**********DISCOUNT OFFER START!!--*********** */
 
 .DiscountOfferWrapper{
   width: 100%;
-  /* height: auto; */
+
   margin: 5% auto;
-  /* border: 1px solid black; */
+  border: 1px solid black;
 }
 
 .DiscountOfferContainer{ 
@@ -703,17 +646,17 @@ main{
   margin: 0 auto;
   background-image: url(../images/blondeoffer.jpg);
   background-repeat: no-repeat;
-  /* background-size: 100% 100%; */
+
   background-position: center;
   background-size: contain;
-  /* border: 2px solid blue; */
+  border: 2px solid blue;
   position: relative;
   overflow: hidden;
 }
 .DiscountOfferContainer > section{
   width: 50%;
-  /* height: 250px; */
-  /* border: 1px solid red; */
+
+  border: 1px solid red;
   position: absolute;
   top: 100px;
   left: 40px;
@@ -741,10 +684,10 @@ main{
   border-radius: 2%;
 }
 
-/* END DISCOUNT OFFER---****** LOOKBOOK START!!!--**************** */
+
 .LookbookMainWrapper{
   width: 100%;
-  /* height: auto; */
+
   margin: 5% auto;
 }
 .LookbookMainWrapper > h3{
@@ -755,7 +698,7 @@ main{
 }
 .LookbookImagesWrapper{
   width: 85vw;
-  /* height: auto; */
+
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(3, 1fr);
@@ -818,4 +761,5 @@ main{
 
 
 };
+*/
 
