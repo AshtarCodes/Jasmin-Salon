@@ -61,11 +61,19 @@ p{
   font-size: 0.85rem;
   font-weight: 300;
 }
-/* .btn {
-  padding: 1em 2.5em;
-  background-color: var(--clr-neutral-900);
-  color: var(--clr-neutral-100);
-} */
+.btn {
+  padding: .5em 1.75em;
+  font-weight: 300;
+  margin-top: .5em;
+  text-decoration: none;
+  border-radius: 0.1em;
+}
+
+.btn-primary {
+  background: var(--clr-neutral-900);
+  color:var(--clr-neutral-100);
+  justify-self: start;
+}
 /******************************************
 /* LAYOUT
 /*******************************************/
@@ -176,6 +184,7 @@ nav a{
   background-repeat: no-repeat;
   background-size: cover;
   background-color: white;
+  padding: 4em 0;
 }
 .hero > *{
   grid-column: 2 / -2;
@@ -197,7 +206,7 @@ nav a{
   font-weight: 100;
 }
 .hero-services{
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: var(--clr-neutral-100);
   font-family: var(--ff-primary);
   font-weight: 500;
@@ -251,16 +260,16 @@ main {
     /* line-height: 1.5;
     margin-bottom: 1 em; */
   }
-  .Story > a{
+  .Story a{
     /* font-size: 1em 2.5; */
     /* width: 9.52rem; */
     /* background: black; */
     /* padding: 1em 2.5em; */
     /* border-radius: 3%; */
     text-decoration: none;
-    /* color: white; */
+    color: white;
     display: block;
-    text-align: center;
+    text-align: left;
   }
 .StoryVideoContainer{
   /* width: min(50%, 28.5rem);
