@@ -9,20 +9,29 @@
 /******************************************
 /* BASE STYLES
 /*******************************************/
+:root {
+  --clr-primary-200: #f3eed9;
+  --clr-primary-400: red;
 
+  --clr-neutral-100: #fff;
+  --clr-neutral-900: #222c2a;
+
+  --ff-primary: "Roboto", sans-serif;
+  --ff-accent: "Playfair Display", serif;
+}
 body {
-  font-size: 62.5%;
+  font-family: var(--ff-primary);
+  font-weight: 400;
+  font-size: 1.3125rem;
+  line-height: 1.6;
 }
-.container{
-  margin-inline: auto;
-  width: min(90%, 112.8rem)
-}
+
 h1{
-  font-size: clamp(1.3rem, 2.5vw, 1.5rem) ;
+  font-size: clamp(0.619rem, 2.5vw, 0.71428rem) ;
   margin-left: 2%;
 }
 h2{
-  font-size: 6rem;
+  font-size: 4em;
   color: white;
   font-weight: lighter;
   margin: 1rem 0 0.5rem 0;
@@ -30,14 +39,48 @@ h2{
 ul{
   list-style-type: none;
 }
+img{
+  
+}
+.btn {
+  
+}
 /******************************************
 /* LAYOUT
 /*******************************************/
+.wrapper {
+  width: 100%;
+  margin: 3em auto;
+}
+.container{
+  margin: 0 auto;
+  width: min(90%, 70.5rem)
+}
+.column {
+  width: min(100%, 28.5rem);
+}
+.col-2{
+  width: min(50%, 28.5rem);
+}
+.col-3{
+  width: min(33.33%, 22.85rem );
+}
+@media (max-width: 750px){
+  .column {
+    width: 90%;
+  }
+  .col-2,
+  .col-3{
+    width: 90%
+  }
+}
 .flex {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  /* align-content: center; */
 }
-@media (min-width: 64em){
+@media (min-width: 40em){
   .flex {
     flex-direction: row;
   }
@@ -48,25 +91,9 @@ ul{
     margin-left: 2em;
   }
 }
-.flex-one{
-  display: flex;
-  flex-direction: column;
-}
-.flex-two {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  align-content: center;
-}
-.flex-three{
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  align-content: center;
-}
 header {
   width: 100%;
-  height: 700px;
+  height: 33.33rem;
   background-image: url(../images/purplehair.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -183,104 +210,83 @@ main {
   /* height: auto; CONSIDER USING VH - BROWSER COMPAT?? ******* */
   background: white;
 }
-.ServicesWrapper{
-  width: 100%;
-}
+
 .ServicesContainers{
-  width: 30%;
+  /* width: 30%; */
   /* padding: 3%; */
   text-align: center;
   /* border: 2px solid blue; */
 }
-.ServicesIconContainer{
-  max-width: 100px;
-  /* height: 100px; */
-  /* background: purple; */
-  margin-inline: auto;
-  /* border: 3px solid yellow; */
-}
-.ServicesIconContainer > img{
-  display: block;
-  width: 100%; 
-  /* height: 100%; */
-  /* border: 1px solid black; */
-}
-.ServicesContainers h3{
-  font-size: 1.2rem;
-}
-.ServicesContainers p{
-  color: grey;
-  font-size: 0.8rem;
-}
+  .ServicesIconContainer{
+    max-width: 100px;
+    margin: 0 auto;
+  }
+    .ServicesIconContainer > img{
+      display: block;
+      width: 100%; 
+      /* height: 100%; */
+      /* border: 1px solid black; */
+    }
+    .ServicesContainers h3{
+      font-size: 1.2rem;
+    }
+    .ServicesContainers p{
+      color: grey;
+      font-size: 0.8rem;
+    }
 
 /* END SERVICES************STORY START!!--***************---------- */
 
-.StoryWrapper{
-  width: 100%;  
-  border: 2px solid black;
-}
-.StoryVideoContainer{
-  width: min(50%, 60rem);
-  padding: 2.5%;
-}
-
-.videoWrapper {
-  width: 100%;
-  height: 0;
-  display: block;
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 */
-  margin: 0 auto;
-}
-.videoWrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
 .Story{
-  width: 50%;
-  /* height: 250px; */
-  /* Order: 1; */
-  padding: 2em;
+  /* width: min(50%, 28.5rem );
+  padding: 2em; */
   /* border: 2px solid blue; */
 }
-.Story > h3{
-  font-size: 2rem;
-  text-transform: uppercase;
-  font-weight: 400;
-  /* margin-top: 0%;
-  margin-bottom: 4%; */
+  .Story > h3{
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+  .Story > p{
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 1 em;
+  }
+  .Story > a{
+    font-size: 0.9rem;
+    background: black;
+    padding: 3.5% 7%;
+    border-radius: 3%;
+    text-decoration: none;
+    color: white;
+    width: 200px;
+    display: block;
+    text-align: center;
+  }
+.StoryVideoContainer{
+  /* width: min(50%, 28.5rem);
+  padding: 2.5%; */
 }
-.Story > p{
-  font-size: 0.9rem;
-  line-height: 1.5;
-  margin-bottom: 1 em;
-}
-.Story > a{
-  font-size: 0.9rem;
-  background: black;
-  padding: 3.5% 7%;
-  border-radius: 3%;
-  text-decoration: none;
-  color: white;
-  width: 200px;
-  display: block;
-  text-align: center;
-}
+  .videoWrapper {
+    width: 100%;
+    height: 0;
+    display: block;
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    margin: 0 auto;
+  }
+    .videoWrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
 /* END STORY---************BEAUTICIAN START!!!---********************* */
-.BeauticiansWrapper{
-  width: 100%;
-  /* height: 375px; */
-  margin: 5% auto;
-  /* padding-left: 5%; */
-  /* border: 1px solid black; */
-}
 
 .BeauticianContainer{
-  width: 33.33%;
+  /* width: 33.33%; */
   /* padding: 0 3%; */
   /* border: 2px solid blue; */
 }
@@ -316,15 +322,8 @@ main {
 
 /* END BEAUTICIAN --**********DISCOUNT OFFER START!!--*********** */
 
-.DiscountOfferWrapper{
-  width: 100%;
-  /* height: auto; */
-  margin: 5% auto;
-  /* border: 1px solid black; */
-}
-
 .DiscountOfferContainer{ 
-  width: 80%;
+  /* width: 80%; */
   height: 0;
   padding-top: calc(268 / 600 * 100%);
   margin: 0 auto;
@@ -342,8 +341,8 @@ main {
   /* height: 250px; */
   /* border: 1px solid red; */
   position: absolute;
-  top: 100px;
-  left: 40px;
+  top: 4.76em;
+  left: 1.9em;
 }
 .DiscountOfferContainer > section > h4{
   font-size: 1.3rem;
@@ -369,17 +368,15 @@ main {
 }
 
 /* END DISCOUNT OFFER---****** LOOKBOOK START!!!--**************** */
-.LookbookMainWrapper{
-  margin: 3em auto;
-}
-.LookbookMainWrapper > h3{
+
+.LookbookMainWrapper h3{
   text-align: center;
   font-size: 1.5rem;
   font-weight: normal;
   text-transform: uppercase;
 }
 .LookbookImagesWrapper{
-  width: 85vw;
+  width: 100%;
   /* height: auto; */
   display: grid;
   grid-gap: 10px;
