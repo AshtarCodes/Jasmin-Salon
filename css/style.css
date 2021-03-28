@@ -293,7 +293,7 @@ main {
 
 /* IMAGE CONTAINER */
 .BeauticianContainer > section:nth-of-type(1){
-  width: 62%;
+  /* width: 90%; */
   margin: 0 auto;
   /* border: 2px solid yellow; */
 }
@@ -306,8 +306,9 @@ main {
 }
 /* BEAUTICIAN LABELS */
 .BeauticianContainer > section + section{
-  width: 62%;
-  padding: 0.5rem 1.0rem;
+  /* width: 62%; */
+  font-size: 1rem;
+  padding: 0.5em 1.25em;
   margin: 0 auto;
   text-align: center;
   background: black;
@@ -438,7 +439,64 @@ main {
   background-repeat: no-repeat;
 }
 
-
+/******************************************
+/* LAYOUT -- temporary location
+/*******************************************/
+p{
+  
+}
+.btn {
+  padding: 1em 2.5em;
+}
+.container{
+  width: min(90%, 70.5rem);
+  margin: 0 auto;
+  /* padding: inherit 7rem; */
+}
+.wrapper {
+  width: 100%;
+  margin: 2em auto;
+}
+.column {
+  width: min(100%, 28.5rem);
+}
+.col-2{
+  width: min(50%, 28.5rem);
+}
+.col-3{
+  width: min(33.33%, 22.85rem );
+}
+@media (max-width: 750px){
+  .column {
+    width: 90%;
+  }
+  .col-2,
+  .col-3{
+    width: 90%;
+    margin: 1em;
+  }
+}
+/* .container{
+  padding: inherit 4rem;
+} */
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (min-width: 40em){
+  
+  .flex {
+    flex-direction: row;
+  }
+  .flex > * {
+    flex-basis: 100%;
+  }
+  /* .flex > * + * {
+    margin-left: 2em;
+  } */
+}
 
 /******************************************
 /* ADDITIONAL STYLES
