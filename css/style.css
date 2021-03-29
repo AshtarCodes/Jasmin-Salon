@@ -22,7 +22,7 @@
 body {
   font-family: var(--ff-primary);
   font-weight: 400;
-  font-size: 1.3125rem;
+  font-size: 1.3125rem; /*21 px */
   line-height: 1.5;
 }
 h1,h2,h3,h4,h5{
@@ -31,7 +31,6 @@ h1,h2,h3,h4,h5{
 }
 h1{
   font-size: clamp(1rem, 2.5vw, 1.5rem) ;
-  margin: 0%;
   font-family: var(--ff-accent);
   font-weight: 400;
 }
@@ -86,6 +85,11 @@ p{
   width: 100%;
   margin: 2em auto;
 }
+@media (min-width: 750px){
+  .wrapper{
+    margin: 3em auto;
+  }
+}
 .column {
   width: min(100%, 28.5rem);
 }
@@ -127,7 +131,7 @@ p{
   }
 }
 header {
-  width: 100%;
+  width: min(100%, 71.5em);
   /* height: 33.33rem; */
   margin: 0 auto;
 }
@@ -137,16 +141,12 @@ header {
 } */
 .navContainer{
   width: 100%;
-  /* height: 60px; */
-  /* padding: 0 1rem; */
-  /* overflow: auto; */
 }
 .headerFlex{
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin: 0 auto;
-
 }
 
 .navLinks{
@@ -158,11 +158,9 @@ header {
   margin: 0;
 }
 .book{
-  margin-right: 2%;
+  /* margin-right: 2%; */
 }
-/* nav, h1, nav ul, nav img{
-  padding-top: 0%;
-} */
+
 nav {
   width: 100%;
   height: 60px;
@@ -188,6 +186,65 @@ nav a{
 }
 .hero > *{
   grid-column: 2 / -2;
+}
+@media (min-width: 650px){
+  .hero {
+    padding: 4em 0;
+    grid-template-columns: minmax(1em, 1fr) repeat(2, minmax(225px, 500px)) minmax(1em, 1fr);
+    
+  }
+  .hero > *{
+    grid-column: 2 / 3;
+    justify-self: start;
+  }
+}
+@media (min-width: 850px){
+  .hero {
+    padding: 6em 0;
+    grid-template-columns: minmax(1em, 1fr) repeat(2, minmax(225px, 500px)) minmax(1em, 1fr);
+    
+  }
+  .hero > *{
+    grid-column: 2 / 3;
+    justify-self: start;
+  }
+}
+@media (min-width: 1200px){
+  .hero {
+    padding: 8em 0;
+    grid-template-columns: minmax(1em, 1fr) repeat(3, minmax(225px, 500px)) minmax(1em, 1fr);
+    /* background-position: center; */
+  }
+  .hero > *{
+    grid-column: 2 / 3;
+    justify-self: start;
+  }
+  .heroContent{
+    font-size: 1.25em;
+  }
+}
+@media (min-width: 1400px){
+  .hero {
+    padding: 10em 0;
+    
+  }
+  .heroContent{
+    font-size: 1.5em;
+  }
+  
+}
+@media (min-width: 1600px){
+  .hero {
+    padding: 12em 0;
+  }
+}
+@media (min-width: 2000px){
+  .hero {
+    padding: 13em 0;
+  }
+  .heroContent{
+    font-size: 2em;
+  }
 }
 .heroContent{
 
