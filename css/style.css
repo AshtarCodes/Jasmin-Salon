@@ -30,7 +30,8 @@ h1,h2,h3,h4,h5{
   padding: 0;
 }
 h1{
-  font-size: clamp(1rem, 2.5vw, 1.5rem) ;
+  /* font-size: clamp(1rem, 2.5vw, 1.5rem); */
+  font-size: 1.7rem;
   font-family: var(--ff-accent);
   font-weight: 400;
 }
@@ -74,7 +75,7 @@ p{
   justify-self: start;
 }
 /******************************************
-/* LAYOUT
+/* GENERAL LAYOUT
 /*******************************************/
 .container{
   width: min(90%, 71.5rem);
@@ -130,49 +131,141 @@ p{
     margin-left: 2em;
   }
 }
-header {
-  width: min(100%, 71.5em);
-  /* height: 33.33rem; */
-  margin: 0 auto;
-}
-/* header > div{
-  overflow: hidden;
-  background: white;
+
+/******************************************
+/* NAV HEADER
+/*******************************************/
+
+header{
+  width: 100%;
+  background: var(--clr-primary-200);
+  text-align: center;
+  position: fixed;
+  z-index: 999;
+  padding: 0.25em;;
+}   
+  nav{
+    width: 100%;
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    background: var(--clr-primary-200);
+    display: none;
+  }
+    nav ul{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+      nav li {
+        margin-bottom: 0.8em;
+        margin-left: 1em;
+      }
+        nav a{
+          text-decoration: none;
+          color: black;
+          font-size: 1rem;
+          text-transform: uppercase;
+        }
+        nav a:hover {
+          color: white;
+        }
+        .navToggle {
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: none;
+        }
+        .navToggle:checked ~ nav{
+          display: block;
+        }    
+        .navToggleLabel{
+          position: absolute;
+          top:0;
+          left: 0;
+          margin-left: 1em;
+          height: 100%;
+          display: flex;
+          align-items: center;
+        }
+        .navToggleLabel span,
+        .navToggleLabel span:before,
+        .navToggleLabel span::after {
+          position: relative;
+          display: block;
+          height: 2.5px;
+          width: 1.5em;
+          background: black;
+          border-radius: 2px;
+        }
+        .navToggleLabel span:before,
+        .navToggleLabel span::after {
+          position: absolute;
+          content: "";
+        }
+        .navToggleLabel span:before {
+          top: 7px;
+        }
+        .navToggleLabel span::after {
+          bottom: 7px;
+        }
+    .book{
+      text-align: center;
+      position: absolute;
+      right: 1rem;
+      top: 0%;
+      font-size: 0.85em;
+      text-decoration: none;
+      color: black;
+      font-family: var(--ff-accent);
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+/* @media (min-width: 600px){
+  
+  header {
+    width: min(100%, 71.5em);
+    
+    margin: 0 auto;
+  }  
+    .navContainer{
+      width: 100%;
+    }
+      .headerFlex{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0 auto;
+      }
+  
+        .navLinks{
+          width: 60%;
+          display: inline-flex;
+          justify-content: space-around;
+          align-items: center;
+          padding: 0;
+          margin: 0;
+        }
+    
+          nav {
+            width: 100%;
+            height: 60px;
+            background: white;
+            
+          }
+          
+            nav a{
+              font-size: 1rem;
+              text-decoration: none;
+              color: black;
+            }
 } */
-.navContainer{
-  width: 100%;
-}
-.headerFlex{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin: 0 auto;
-}
-
-.navLinks{
-  width: 60%;
-  display: inline-flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 0;
-  margin: 0;
-}
-.book{
-  /* margin-right: 2%; */
-}
-
-nav {
-  width: 100%;
-  height: 60px;
-  background: white;
-  /* border: 1px solid red; */
-}
-
-nav a{
-  font-size: 1rem;
-  text-decoration: none;
-  color: black;
-}
+/******************************************
+/* LAYOUT: HERO
+/*******************************************/
 .hero {
   /* width: 100%; */
   display: grid;

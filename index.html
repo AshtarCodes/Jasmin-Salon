@@ -18,10 +18,11 @@
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
-		<header>
-			<div class='navContainer'>
-				<nav class='headerFlex'>
-					<h1>Jasmin.</h1>
+		<header class='headerFlex'>
+			<!-- <div class='navContainer'> -->
+				<h1 class='logo'>Jasmin.</h1>
+				<input type="checkbox" id='navToggle' class='navToggle'>
+				<nav>
 					<ul class='navLinks'>
 						<!-- <li><a href="#">Home</a></li> -->
 						<li><a href="#">About</a></li>
@@ -32,9 +33,12 @@
 						<li><a class="fas fa-search" alt="Search"></a></li>
 						<li><a class="fas fa-shopping-bag" alt="Cart"></a></li>
 					</ul>
-					<span><a class='book' href="#">Book Online</a></span>
 				</nav>
-		    </div>
+				<label for="navToggle" class='navToggleLabel'>
+					<span></span>
+				</label>
+				<span><a class='book' href="#">Book Us</a></span>
+		    <!-- </div> -->
 		</header>
 		<main>
 			<section class="hero">
