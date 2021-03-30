@@ -72,7 +72,6 @@ p{
 .btn-primary {
   background: var(--clr-neutral-900);
   color:var(--clr-neutral-100);
-  justify-self: start;
 }
 /******************************************
 /* GENERAL LAYOUT
@@ -236,9 +235,6 @@ header{
 @media (min-width: 765px){
   .navToggleLabel {
     display: none;
-  }
-  header {
-    /* width: min(100%, 71.5em); */
   }   
       .headerFlex{
         display: flex;
@@ -250,21 +246,11 @@ header{
           all: unset;
           color: black;            
           width: 60%;
-        }
-        
-        .nav-flex{
-          width: 100%;
-          display: flex;
-          justify-content: space-around;
-          align-items: center;
-          padding: 0;
-          margin: 0;
-        }
-    
-            nav li{
-              margin: 0;
-              padding: 0;
-            }
+        }         
+          nav li{
+            margin: 0;
+            padding: 0;
+          }
             nav a{
               opacity: 1;
             }
@@ -292,6 +278,35 @@ header{
 }
 .hero > *{
   grid-column: 2 / -2;
+}
+.hero-subtitle{
+  font-size: 1.5rem;
+  color: var(--clr-neutral-100);
+  font-family: var(--ff-accent);
+  font-weight: 100;
+}
+.hero-services{
+  font-size: 1.3rem;
+  color: var(--clr-neutral-100);
+  font-family: var(--ff-primary);
+  font-weight: 500;
+}
+
+@media (max-width: 500px){
+  .hero {
+    background-position: 60% ;
+  }
+  .hero-title {
+    font-size: 3rem;
+  }
+  .hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2em;
+  }
+  .btn {
+    font-size: 1.25rem;
+  }
+
 }
 @media (min-width: 650px){
   .hero {
@@ -336,8 +351,7 @@ header{
   }
   .heroContent{
     font-size: 1.5em;
-  }
-  
+  }  
 }
 @media (min-width: 1600px){
   .hero {
@@ -352,33 +366,9 @@ header{
     font-size: 2em;
   }
 }
-.heroContent{
-
-}
-.heroContent a{
-  text-decoration: none;
-}
-.heroBox {
-  /* background: var(--clr-neutral-900);
-  color: var(--clr-neutral-100);  */
-}
-.hero-subtitle{
-  font-size: 1.5rem;
-  color: var(--clr-neutral-100);
-  font-family: var(--ff-accent);
-  font-weight: 100;
-}
-.hero-services{
-  font-size: 1.3rem;
-  color: var(--clr-neutral-100);
-  font-family: var(--ff-primary);
-  font-weight: 500;
-}
-
 /* END HEADER ////////*** MAIN *** AND *** SERVICES *** START ********************** */
 main {
   width: 100%;
-  /* height: auto; CONSIDER USING VH - BROWSER COMPAT?? ******* */
   background: white;
 }
 
