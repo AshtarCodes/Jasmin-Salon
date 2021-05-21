@@ -78,6 +78,10 @@ p{
   background: var(--clr-neutral-900);
   color:var(--clr-neutral-100);
 }
+a {
+ text-decoration: none;
+ color: black;
+}
 /******************************************
 /* GENERAL LAYOUT
 /*******************************************/
